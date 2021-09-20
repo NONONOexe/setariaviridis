@@ -4,12 +4,17 @@
 \name{setariaviridis-package}
 \alias{setariaviridis}
 \alias{setariaviridis-package}
-\title{setariaviridis: What the Package Does (One Line, Title Case)}
+\title{setariaviridis: Setaria Viridis Data}
 \description{
-What the package does (one paragraph).
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+
+Setaria viridis is a familiar weed.
+    This package is data measured for each branch of Setaria viridis
+    for practice data analysis. The data was collected
+    from a wild Setaria viridis.
 }
 \author{
-\strong{Maintainer}: First Last \email{first.last@example.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+\strong{Maintainer}: Keisuke Ando \email{ando@maslab.aitech.ac.jp}
 
 }
 \keyword{internal}

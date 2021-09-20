@@ -1,13 +1,16 @@
 Package: setariaviridis
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Setaria Viridis Data
+Version: 0.0.1
+Date: 2021-09-20
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Keisuke",
+           family = "Ando",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+           email = "ando@maslab.aitech.ac.jp")
+Description: Setaria viridis is a familiar weed.
+    This package is data measured for each branch of Setaria viridis
+    for practice data analysis. The data was collected
+    from a wild Setaria viridis.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
