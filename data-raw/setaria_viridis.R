@@ -1,4 +1,7 @@
-library(readr)
+library(tidyverse)
+library(here)
+library(usethis)
 
-setaria_viridis <- read_csv("data-raw/setaria_viridis.csv")
-usethis::use_data(setaria_viridis, overwrite = TRUE)
+data_path <- here("inst", "extdata", "setaria_viridis.csv")
+setaria_viridis <- read_csv(data_path, col_types = "innni")
+use_data(setaria_viridis, overwrite = TRUE)

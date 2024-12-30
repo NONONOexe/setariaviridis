@@ -3,23 +3,23 @@
 \docType{data}
 \name{setaria_viridis}
 \alias{setaria_viridis}
-\title{Size measurements for Setaria viridis}
+\title{Size measurements for \emph{Setaria viridis}}
 \format{
-A data frame with 54 rows and 5 variables
+A data frame with 54 rows and 5 variables:
 \describe{
-\item{root_number}{a factor denoting that it is growing from the same root}
-\item{culm_length}{a number denoting culm length above ground (cm)}
-\item{panicle_width}{a number denoting panicle width (cm)}
-\item{panicle_length}{a number denoting panicle length (cm)}
-\item{leaf_number}{an integer denoting number of leaves on the side branches (cm)}
+\item{root_number}{A factor indicating which branches share the same root.}
+\item{culm_length}{Numeric. Length of the culm above ground, measured in centimeters (cm).}
+\item{panicle_width}{Numeric. Width of the panicle, measured in centimeters (cm).}
+\item{panicle_length}{Numeric. Length of the panicle, measured in centimeters (cm).}
+\item{leaf_number}{Integer. Number of leaves on the side branch.}
 }
 }
 \usage{
 setaria_viridis
 }
 \description{
-A dataset containing the length of each parts and
-other attributes for each branch of Setaria viridis.
-The variables are as follows:
+This dataset contains measurements of various parts
+and attributes for each branch of \emph{Setaria viridis}.
+The variables are described as follows:
 }
 \keyword{datasets}

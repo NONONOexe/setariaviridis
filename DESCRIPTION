@@ -1,20 +1,21 @@
 Package: setariaviridis
-Title: Setaria Viridis Data
-Version: 0.0.1
-Date: 2021-09-20
+Title: Field-Collected Data of Green Foxtail (Setaria vilidis)
+Version: 0.1.0
 Authors@R: 
-    person(given = "Keisuke",
-           family = "Ando",
-           role = c("aut", "cre"),
-           email = "ando@maslab.aitech.ac.jp")
-Description: Setaria viridis is a familiar weed.
-    This package is data measured for each branch of Setaria viridis
-    for practice data analysis. The data was collected
-    from a wild Setaria viridis.
+    person("Keisuke", "ANDO",
+           email  = "ando@maslab.aitech.ac.jp",
+           role   = c("aut", "cre"),
+          comment = c(ORCID = "0009-0002-4085-2067"))
+Description: Setaria viridis (green foxtail) is a common weed.
+  This package contains measurements from individual branches of
+  a wild Setaria viridis plant collected near the author's home.
+  The data is intended for use in data analysis practice.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.3.2
 Depends: 
-    R (>= 2.10)
+    R (>= 3.5)
+URL: https://github.com/NONONOexe/setariaviridis, https://nononoexe.github.io/setariaviridis/
+BugReports: https://github.com/NONONOexe/setariaviridis/issues

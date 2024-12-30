@@ -1,0 +1,182 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "75%",
+  warning = FALSE,
+  message = FALSE,
+  fig.align = "center"
+)
+```
+
+# setariaviridis <a href="https://nononoexe.github.io/setariaviridis/"><img src="man/figures/logo.png" align="right" height="138" alt="setariaviridis website" /></a>
+
+<!-- badges: start -->
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![CRAN status](https://www.r-pkg.org/badges/version/setariaviridis)](https://CRAN.R-project.org/package=setariaviridis)
+[![R-CMD-check](https://github.com/NONONOexe/setariaviridis/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/NONONOexe/setariaviridis/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
+## Overview
+
+*Setaria viridis* (green foxtail, ネコジャラシ) is a common weed. This package contains measurements from individual branches of a wild *Setaria viridis* plant collected near the author's home.
+
+The dataset is intended for practicing basic data analysis techniques. It's ideal for learning how to calculate basic descriptive statics, create visualizations such as histograms and scatter plots, and gain experience with data manipulation and exploration using R. Its relatively small size and straightforward structure make this dataset easy to work with for beginners in data analysis.
+
+## Installation
+
+You can install the setariaviridis using the following methods:
+
+### Using `install.packages()` (R-universe)
+
+```r
+# Enable the R-universe
+options(repos = c(
+  nononoexe = "https://nononoexe.r-universe.dev",
+  cran = "https://cloud.r-project.org"
+))
+
+# Install the package
+install.packages("setariaviridis")
+```
+
+### Using `pak`
+
+``` r
+# install.packages("pak")
+pak::pak("NONONOexe/setariaviridis")
+```
+
+## About the data
+
+The data in this package comprises measurements of *Setaria viridis* collected by the author around their home in Aichi Prefecture, Japan.
+
+```{r, echo = FALSE}
+knitr::include_graphics("man/figures/collect-location.png", dpi = 300)
+```
+
+This data was obtained in August 2021 by hand-harvesting Setaria viridis plants, root and all, from a dense population. Measurements of each plant part were taken manually using a tape measure and a ruler.
+
+```{r, echo = FALSE}
+knitr::include_graphics("man/figures/collecting-data.png", dpi = 300)
+```
+
+The data can be accessed as follows:
+
+```{r showdata}
+library(setariaviridis)
+data(package = "setariaviridis")
+head(setaria_viridis)
+```
+
+If you want to see for more info: `?setaria_viridis`
+
+The data contains of 54 branches across 10 *Setaria viridis* plants. *Setaria viridis* consists of 4 parts: panicle, leaf, culm, and root, as illustrated in the figure below:
+
+```{r, echo = FALSE}
+knitr::include_graphics("man/figures/setariaviridis-part.png", dpi = 300)
+```
+
+Data sharing the same roots can be identified by the `root_number`. For all other measurement items, please refer to the following figure to understand which parts were measured:
+
+```{r, echo = FALSE}
+knitr::include_graphics("man/figures/setariaviridis-mesurement.png", dpi = 300)
+```
+
+## Example
+
+Using setariaviridis, you can visualize like followings:
+
+```{r culm-hist, echo = FALSE}
+library(tidyverse)
+
+# Calculate histogram parameters
+hist_params <- lst(
+  data      = setaria_viridis$culm_length,
+  bin_count = nclass.Sturges(data),
+  boundary  = 16,
+  bin_width = round(diff(range(data)) / bin_count),
+  x_min     = seq(boundary, max(data), by = bin_width),
+  x_max     = x_min + bin_width,
+  center    = (x_min + x_max) / 2,
+  labels    = str_c(x_min, "-", x_max)
+)
+
+# Create histogram plot
+culm_hist <-
+  ggplot(setaria_viridis, aes(x = culm_length)) +
+  # Add histogram layer with specified parameters
+  geom_histogram(
+    binwidth = hist_params$bin_width,
+    boundary = hist_params$boundary,
+    colour   = "white",
+    fill     = "darkolivegreen4"
+  ) +
+  # Set plot labels
+  labs(
+    title = "Culm length distribution",
+    x     = "Culm length (cm)",
+    y     = "Frequency"
+  ) +
+  # Customize x-axis scale
+  scale_x_continuous(
+    breaks = hist_params$center,
+    labels = hist_params$labels
+  ) +
+  # Apply theme customizations
+  theme_bw() +
+  theme(
+    plot.title.position = "plot",
+    panel.grid          = element_blank(),
+    panel.grid.major.y  = element_line(
+      colour    = "black",
+      linewidth = 0.2
+    ),
+    axis.ticks.x        = element_blank(),
+    axis.text.x         = element_text(
+      angle  = 45,
+      hjust  = 1,
+      colour = "black",
+      margin = margin(t = 3, b = 3)
+    )
+  )
+
+# Display the histogram
+culm_hist
+```
+
+```{r panicle-size, echo = FALSE}
+# Create scatter plot
+panicle_size <-
+  ggplot(setaria_viridis, aes(x = panicle_width, y = panicle_length)) +
+  geom_point(colour = "darkolivegreen4") +
+  labs(
+    title = "Panicle size",
+    x     = "Panicle width (cm)",
+    y     = "Panicle length (cm)"
+  ) +
+  theme_bw() +
+  theme(
+    plot.title.position = "plot",
+    panel.grid          = element_blank(),
+    panel.grid.major    = element_line(
+      colour    = "black",
+      linewidth = 0.2,
+      linetype  = "dashed"
+    )
+  )
+
+panicle_size
+```
+
+## Code of conduct
+
+Please note that this project is released with a [Contributor Code of Conduct](https://nononoexe.github.io/setariaviridis/CODE_OF_CONDUCT.html).
+By participating in this project you agree to abide by its terms.
