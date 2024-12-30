@@ -5,31 +5,31 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Setaria Viridis Data • setariaviridis</title>
+<title>Field-Collected Data of Green Foxtail (Setaria vilidis) • setariaviridis</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
-<script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="lightswitch.js"></script><script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Setaria Viridis Data">
-<meta name="description" content="Setaria viridis is a familiar weed. This package is data measured for each branch of Setaria viridis for practice data analysis. The data was collected from a wild Setaria viridis.">
-<meta property="og:description" content="Setaria viridis is a familiar weed. This package is data measured for each branch of Setaria viridis for practice data analysis. The data was collected from a wild Setaria viridis.">
+<script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Field-Collected Data of Green Foxtail (Setaria vilidis)">
+<meta name="description" content="Setaria viridis (green foxtail) is a common weed. This package contains measurements from individual branches of a wild Setaria viridis plant collected near the author's home. The data is intended for use in data analysis practice.">
+<meta property="og:description" content="Setaria viridis (green foxtail) is a common weed. This package contains measurements from individual branches of a wild Setaria viridis plant collected near the author's home. The data is intended for use in data analysis practice.">
 <meta property="og:image" content="https://nononoexe.github.io/setariaviridis/logo.png">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
-    <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
+    <nav class="navbar navbar-expand-lg fixed-top " aria-label="Site navigation"><div class="container">
 
     <a class="navbar-brand me-2" href="index.html">setariaviridis</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.1.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,6 +44,15 @@
 <li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="search.json">
 </form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/NONONOexe/setariaviridis/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-lightswitch" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" aria-label="Light switch"><span class="fa fa-sun"></span></button>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-lightswitch">
+<li><button class="dropdown-item" data-bs-theme-value="light"><span class="fa fa-sun"></span> Light</button></li>
+    <li><button class="dropdown-item" data-bs-theme-value="dark"><span class="fa fa-moon"></span> Dark</button></li>
+    <li><button class="dropdown-item" data-bs-theme-value="auto"><span class="fa fa-adjust"></span> Auto</button></li>
+  </ul>
+</li>
       </ul>
 </div>
 
@@ -53,21 +62,91 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header">
-<img src="logo.png" class="logo" alt=""><h1 id="setariaviridis-">setariaviridis <a class="anchor" aria-label="anchor" href="#setariaviridis-"></a>
+<img src="logo.png" class="logo" alt=""><h1 id="setariaviridis-">setariaviridis 
+<a class="anchor" aria-label="anchor" href="#setariaviridis-"></a>
 </h1>
 </div>
-<p>Setaria viridis is a familiar weed. This package is data measured for each branch of Setaria viridis for practice data analysis. The data was collected from a wild Setaria viridis.</p>
+<!-- badges: start -->
+
+<div class="section level2">
+<h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
+</h2>
+<p><em>Setaria viridis</em> (green foxtail, ネコジャラシ) is a common weed. This package contains measurements from individual branches of a wild <em>Setaria viridis</em> plant collected near the author’s home.</p>
+<p>The dataset is intended for practicing basic data analysis techniques. It’s ideal for learning how to calculate basic descriptive statics, create visualizations such as histograms and scatter plots, and gain experience with data manipulation and exploration using R. Its relatively small size and straightforward structure make this dataset easy to work with for beginners in data analysis.</p>
+</div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>You can install from GitHub use:</p>
+<p>You can install the setariaviridis using the following methods:</p>
+<div class="section level3">
+<h3 id="using-installpackages-r-universe">Using <code>install.packages()</code> (R-universe)<a class="anchor" aria-label="anchor" href="#using-installpackages-r-universe"></a>
+</h3>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://remotes.r-lib.org" class="external-link">remotes</a></span><span class="op">)</span></span>
-<span><span class="fu">install_github</span><span class="op">(</span><span class="st">"NONONOexe/setariaviridis"</span><span class="op">)</span></span></code></pre></div>
-<p>Sorry, It does not support CRAN now.</p>
+<code class="sourceCode R"><span><span class="co"># Enable the R-universe</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
+<span>  nononoexe <span class="op">=</span> <span class="st">"https://nononoexe.r-universe.dev"</span>,</span>
+<span>  cran <span class="op">=</span> <span class="st">"https://cloud.r-project.org"</span></span>
+<span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Install the package</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"setariaviridis"</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="using-pak">Using <code>pak</code>
+<a class="anchor" aria-label="anchor" href="#using-pak"></a>
+</h3>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
+<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"NONONOexe/setariaviridis"</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
-  </main><aside class="col-md-3"><div class="license">
+<div class="section level2">
+<h2 id="about-the-data">About the data<a class="anchor" aria-label="anchor" href="#about-the-data"></a>
+</h2>
+<p>The data in this package comprises measurements of <em>Setaria viridis</em> collected by the author around their home in Aichi Prefecture, Japan.</p>
+<p><img src="reference/figures/collect-location.png" width="75%" style="display: block; margin: auto;"></p>
+<p>This data was obtained in August 2021 by hand-harvesting Setaria viridis plants, root and all, from a dense population. Measurements of each plant part were taken manually using a tape measure and a ruler.</p>
+<p><img src="reference/figures/collecting-data.png" width="75%" style="display: block; margin: auto;"></p>
+<p>The data can be accessed as follows:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/NONONOexe/setariaviridis" class="external-link">setariaviridis</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span>package <span class="op">=</span> <span class="st">"setariaviridis"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">setaria_viridis</span><span class="op">)</span></span>
+<span><span class="co">#&gt;   root_number culm_length panicle_width panicle_length leaf_number</span></span>
+<span><span class="co">#&gt; 1           1        69.3           2.0            6.9           1</span></span>
+<span><span class="co">#&gt; 2           1        49.5           1.3            4.2           3</span></span>
+<span><span class="co">#&gt; 3           1        49.1           1.8            6.5           4</span></span>
+<span><span class="co">#&gt; 4           1        47.0           1.7            5.1           4</span></span>
+<span><span class="co">#&gt; 5           1        51.3           2.0            5.9           5</span></span>
+<span><span class="co">#&gt; 6           2        51.6           1.9            5.8           3</span></span></code></pre></div>
+<p>If you want to see for more info: <code><a href="reference/setaria_viridis.html">?setaria_viridis</a></code></p>
+<p>The data contains of 54 branches across 10 <em>Setaria viridis</em> plants. <em>Setaria viridis</em> consists of 4 parts: panicle, leaf, culm, and root, as illustrated in the figure below:</p>
+<p><img src="reference/figures/setariaviridis-part.png" width="75%" style="display: block; margin: auto;"></p>
+<p>Data sharing the same roots can be identified by the <code>root_number</code>. For all other measurement items, please refer to the following figure to understand which parts were measured:</p>
+<p><img src="reference/figures/setariaviridis-mesurement.png" width="75%" style="display: block; margin: auto;"></p>
+</div>
+<div class="section level2">
+<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+</h2>
+<p>Using setariaviridis, you can visualize like followings:</p>
+<p><img src="reference/figures/README-culm-hist-1.png" width="75%" style="display: block; margin: auto;"></p>
+<p><img src="reference/figures/README-panicle-size-1.png" width="75%" style="display: block; margin: auto;"></p>
+</div>
+<div class="section level2">
+<h2 id="code-of-conduct">Code of conduct<a class="anchor" aria-label="anchor" href="#code-of-conduct"></a>
+</h2>
+<p>Please note that this project is released with a <a href="https://nononoexe.github.io/setariaviridis/CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By participating in this project you agree to abide by its terms.</p>
+</div>
+</div>
+  </main><aside class="col-md-3"><div class="links">
+<h2 data-toc-skip>Links</h2>
+<ul class="list-unstyled">
+<li><a href="https://github.com/NONONOexe/setariaviridis/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/NONONOexe/setariaviridis/issues" class="external-link">Report a bug</a></li>
+</ul>
+</div>
+
+<div class="license">
 <h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
@@ -75,6 +154,12 @@
 </ul>
 </div>
 
+<div class="community">
+<h2 data-toc-skip>Community</h2>
+<ul class="list-unstyled">
+<li><a href="CODE_OF_CONDUCT.html">Code of conduct</a></li>
+</ul>
+</div>
 
 <div class="citation">
 <h2 data-toc-skip>Citation</h2>
@@ -86,7 +171,7 @@
 <div class="developers">
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li>Keisuke Ando <br><small class="roles"> Author, maintainer </small>  </li>
+<li>Keisuke ANDO <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0009-0002-4085-2067" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 </ul>
 </div>
 
@@ -97,7 +182,7 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by Keisuke Ando.</p>
+  <p>Developed by Keisuke ANDO.</p>
 </div>
 
 <div class="pkgdown-footer-right">
@@ -109,7 +194,6 @@
 
 
 
-
-
-  </body>
+  <script data-goatcounter="https://nononoexe.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
 </html>
