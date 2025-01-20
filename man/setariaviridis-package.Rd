@@ -4,7 +4,7 @@
 \name{setariaviridis-package}
 \alias{setariaviridis}
 \alias{setariaviridis-package}
-\title{setariaviridis: Field-Collected Data of Green Foxtail (Setaria vilidis)}
+\title{setariaviridis: Field-Collected Data of Green Foxtail}
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
@@ -20,7 +20,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Keisuke ANDO \email{ando@maslab.aitech.ac.jp} (\href{https://orcid.org/0009-0002-4085-2067}{ORCID})
+\strong{Maintainer}: Keisuke Ando \email{ando@maslab.aitech.ac.jp} (\href{https://orcid.org/0009-0002-4085-2067}{ORCID})
 
 }
 \keyword{internal}
