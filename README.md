@@ -29,7 +29,15 @@ easy to work with for beginners in data analysis.
 
 You can install the setariaviridis using the following methods:
 
-### Using `install.packages()` (R-universe)
+### CRAN version
+
+``` r
+install.packages("setariaviridis")
+```
+
+### Development version
+
+#### Using `install.packages()` (R-universe)
 
 ``` r
 # Enable the R-universe
@@ -42,7 +50,7 @@ options(repos = c(
 install.packages("setariaviridis")
 ```
 
-### Using `pak`
+#### Using `pak`
 
 ``` r
 # install.packages("pak")

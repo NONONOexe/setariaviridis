@@ -34,7 +34,15 @@ The dataset is intended for practicing basic data analysis techniques. It's idea
 
 You can install the setariaviridis using the following methods:
 
-### Using `install.packages()` (R-universe)
+### CRAN version
+
+```r
+install.packages("setariaviridis")
+```
+
+### Development version
+
+#### Using `install.packages()` (R-universe)
 
 ```r
 # Enable the R-universe
@@ -47,7 +55,7 @@ options(repos = c(
 install.packages("setariaviridis")
 ```
 
-### Using `pak`
+#### Using `pak`
 
 ``` r
 # install.packages("pak")
