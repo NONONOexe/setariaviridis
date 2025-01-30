@@ -10,6 +10,8 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 [![CRAN
 status](https://www.r-pkg.org/badges/version/setariaviridis)](https://CRAN.R-project.org/package=setariaviridis)
 [![R-CMD-check](https://github.com/NONONOexe/setariaviridis/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/NONONOexe/setariaviridis/actions/workflows/R-CMD-check.yaml)
+[![CRAN
+downloads](https://cranlogs.r-pkg.org/badges/grand-total/setariaviridis)](https://cran.r-project.org/package=setariaviridis)
 <!-- badges: end -->
 
 ## Overview
